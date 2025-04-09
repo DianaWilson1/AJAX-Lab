@@ -16,7 +16,7 @@ const App = () => {
       url = data.next;
     }
     setStarships(allStarships);
-    setFilteredStarships(allStarships); // ✅ Show all on load
+    setFilteredStarships(allStarships);
   };
 
   useEffect(() => {

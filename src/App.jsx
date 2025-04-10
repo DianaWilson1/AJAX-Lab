@@ -12,11 +12,11 @@ const App = () => {
     while (url) {
       const res = await fetch(url);
       const data = await res.json();
-      allStarships = [...allStarships, ...data.results];
+      allStarships = allStarships.concat(data.results);
       url = data.next;
     }
     setStarships(allStarships);
-    setFilteredStarships(allStarships);
+    setFilteredStarships(allStarships); // ✅ Show all on load
   };
 
   useEffect(() => {
